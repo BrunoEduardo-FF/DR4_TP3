@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/fragment_cadastrar_avaliacao_lbl_pergunta3_enunciado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/pergunta3_enunciado"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_cadastrar_avaliacao_rdgroup2" />
+
+    <TextView
+        android:id="@+id/fragment_cadastrar_avaliacao_lbl_pergunta4_enunciado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/pergunta4_enunciado"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_cadastrar_avaliacao_rdgroup3" />
+
+    <TextView
+        android:id="@+id/fragment_cadastrar_avaliacao_lbl_pergunta5_enunciado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/pergunta5_enunciado"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_cadastrar_avaliacao_rdgroup4" />
+
+    <TextView
+        android:id="@+id/fragment_cadastrar_avaliacao_lbl_pergunta6_enunciado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/pergunta6_enunciado"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_cadastrar_avaliacao_rdgroup5" />
+
+    <TextView
+        android:id="@+id/fragment_cadastrar_avaliacao_lbl_pergunta2_enunciado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/pergunta2_enunciado"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_cadastrar_avaliacao_rdgroup1" />
+
+    <TextView
+        android:id="@+id/fragment_cadastrar_avaliacao_lbl_pergunta1_enunciado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/pergunta1_enunciado"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/fragment_cadastrar_avaliacao_rdgroup1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_cadastrar_avaliacao_lbl_pergunta1_enunciado">
+
+        <RadioButton
+            android:id="@+id/fragment_cadastrar_avaliacao_rdbtn_pergunta1_opcao1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="9dp"
+            android:paddingVertical="0dp"
+            android:text="@string/opcao1_texto"
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/fragment_cadastrar_avaliacao_rdbtn_pergunta1_opcao2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/opcao2_texto" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/fragment_cadastrar_avaliacao_rdgroup2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_cadastrar_avaliacao_lbl_pergunta2_enunciado">
+
+        <RadioButton
+            android:id="@+id/fragment_cadastrar_avaliacao_rdbtn_pergunta2_opcao1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/opcao1_texto" />
+
+        <RadioButton
+            android:id="@+id/fragment_cadastrar_avaliacao_rdbtn_pergunta2_opcao2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/opcao2_texto" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/fragment_cadastrar_avaliacao_rdgroup3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_cadastrar_avaliacao_lbl_pergunta3_enunciado">
+
+        <RadioButton
+            android:id="@+id/fragment_cadastrar_avaliacao_rdbtn_pergunta3_opcao1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/opcao1_texto" />
+
+        <RadioButton
+            android:id="@+id/fragment_cadastrar_avaliacao_rdbtn_pergunta3_opcao2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/opcao2_texto" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/fragment_cadastrar_avaliacao_rdgroup4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_cadastrar_avaliacao_lbl_pergunta4_enunciado">
+
+        <RadioButton
+            android:id="@+id/fragment_cadastrar_avaliacao_rdbtn_pergunta4_opcao1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/opcao1_texto" />
+
+        <RadioButton
+            android:id="@+id/fragment_cadastrar_avaliacao_rdbtn_pergunta4_opcao2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/opcao2_texto" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/fragment_cadastrar_avaliacao_rdgroup5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_cadastrar_avaliacao_lbl_pergunta5_enunciado">
+
+        <RadioButton
+            android:id="@+id/fragment_cadastrar_avaliacao_rdbtn_pergunta5_opcao1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/opcao1_texto" />
+
+        <RadioButton
+            android:id="@+id/fragment_cadastrar_avaliacao_rdbtn_pergunta5_opcao2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/opcao2_texto" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/fragment_cadastrar_avaliacao_rdgroup6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_cadastrar_avaliacao_lbl_pergunta6_enunciado">
+
+        <RadioButton
+            android:id="@+id/fragment_cadastrar_avaliacao_rdbtn_pergunta6_opcao1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/opcao1_texto" />
+
+        <RadioButton
+            android:id="@+id/fragment_cadastrar_avaliacao_rdbtn_pergunta6_opcao2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/opcao2_texto" />
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

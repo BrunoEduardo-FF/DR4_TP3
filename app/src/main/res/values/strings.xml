@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">DR4_TP3</string>
+    <string name="pergunta1_enunciado">1. Enunciado da primeira pergunta:</string>
+    <string name="pergunta2_enunciado">2. Enunciado da segunda pergunta:</string>
+    <string name="pergunta3_enunciado">3. Enunciado da terceira pergunta:</string>
+    <string name="pergunta4_enunciado">4. Enunciado da quarta pergunta:</string>
+    <string name="pergunta5_enunciado">5. Enunciado da quinta pergunta:</string>
+    <string name="pergunta6_enunciado">6. Enunciado da sextaa pergunta:</string>
+    <string name="opcao1_texto">Sim</string>
+    <string name="opcao2_texto">Não</string>
+    <string name="ha_campos_vazios">Preencha todos os campos da avaliação antes de salvar!</string>
+</resources>
