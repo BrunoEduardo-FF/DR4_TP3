@@ -49,7 +49,7 @@ class DashboardFragment : Fragment() {
             navController.navigate(R.id.listaAvaliacoesFragment)
         }
         btnDados.setOnClickListener {
-
+            navController.navigate(R.id.dadosSintetizadosFragment)
         }
         btnSair.setOnClickListener {
             auth.signOut()

@@ -3,6 +3,7 @@ package br.edu.infnet.dr4_tp3.database.avaliacoes
 import androidx.annotation.NonNull
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import java.io.Serializable
 
 @Entity
 data class Avaliacao(
@@ -16,4 +17,4 @@ data class Avaliacao(
     @NonNull val r5: Boolean,
     @NonNull val r6: Boolean,
     @PrimaryKey val id: Long? = null
-)
+): Serializable

@@ -13,4 +13,7 @@ interface AvaliacaoDao {
     @Query("SELECT * FROM avaliacao WHERE idAvaliador == :idAvaliador")
     suspend fun listFromUser(idAvaliador: String): List<Avaliacao>
 
+    @Query("SELECT * FROM avaliacao")
+    suspend fun list(): List<Avaliacao>
+
 }

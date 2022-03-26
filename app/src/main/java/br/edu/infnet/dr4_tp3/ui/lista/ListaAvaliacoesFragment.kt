@@ -4,12 +4,15 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import br.edu.infnet.dr4_tp3.R
 import br.edu.infnet.dr4_tp3.adapter.AvaliacoesAdapter
 import br.edu.infnet.dr4_tp3.database.AppDatabase
+import br.edu.infnet.dr4_tp3.database.avaliacoes.Avaliacao
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
@@ -42,8 +45,15 @@ class ListaAvaliacoesFragment : Fragment() {
 
         viewModel.avaliacoes.observe(viewLifecycleOwner) {
             if (!it.isNullOrEmpty())
-                recyclerView.adapter = AvaliacoesAdapter(it)
+                recyclerView.adapter = AvaliacoesAdapter(it, this::detalhaAvaliacao)
         }
+    }
+
+    fun detalhaAvaliacao(avaliacao: Avaliacao) {
+        findNavController().navigate(
+            R.id.detalhaAvaliacaoFragment,
+            bundleOf(getString(R.string.ARGUMENT_AVALIACAO) to avaliacao)
+        )
     }
 
 }

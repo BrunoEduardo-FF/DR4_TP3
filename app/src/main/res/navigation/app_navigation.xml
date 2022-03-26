@@ -28,6 +28,9 @@
         <action
             android:id="@+id/action_dashboardFragment_to_listaAvaliacoesFragment"
             app:destination="@id/listaAvaliacoesFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_dadosSintetizadosFragment"
+            app:destination="@id/dadosSintetizadosFragment" />
     </fragment>
     <fragment
         android:id="@+id/cadastrarAvaliacaoFragment"
@@ -43,5 +46,18 @@
         android:id="@+id/listaAvaliacoesFragment"
         android:name="br.edu.infnet.dr4_tp3.ui.lista.ListaAvaliacoesFragment"
         android:label="fragment_lista_avaliacoes"
-        tools:layout="@layout/fragment_lista_avaliacoes" />
+        tools:layout="@layout/fragment_lista_avaliacoes" >
+        <action
+            android:id="@+id/action_listaAvaliacoesFragment_to_detalhaAvaliacaoFragment"
+            app:destination="@id/detalhaAvaliacaoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detalhaAvaliacaoFragment"
+        android:name="br.edu.infnet.dr4_tp3.ui.ler.DetalhaAvaliacaoFragment"
+        android:label="fragment_detalha_avaliacao" />
+    <fragment
+        android:id="@+id/dadosSintetizadosFragment"
+        android:name="br.edu.infnet.dr4_tp3.ui.sintetizados.DadosSintetizadosFragment"
+        android:label="dados_sintetizados_fragment"
+        tools:layout="@layout/fragment_dados_sintetizados" />
 </navigation>

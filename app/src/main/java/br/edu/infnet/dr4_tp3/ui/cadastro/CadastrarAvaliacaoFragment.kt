@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import br.edu.infnet.dr4_tp3.R
 import br.edu.infnet.dr4_tp3.database.AppDatabase
 import com.google.firebase.auth.FirebaseAuth
@@ -82,7 +83,8 @@ class CadastrarAvaliacaoFragment : Fragment() {
             viewModel.cadastrarAvaliacao(userId,
                 nomeEmpresa.text.toString(),
                 bairro.text.toString(), r1, r2, r3, r4, r5, r6)
-                makeToast(getString(R.string.avaliacao_cadastrada))
+            makeToast(getString(R.string.avaliacao_cadastrada))
+            findNavController().popBackStack()
 
         } else {
             makeToast(getString(R.string.ha_campos_vazios))
