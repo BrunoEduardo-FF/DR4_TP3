@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_signInFragment_to_dashboardFragment"
             app:destination="@id/dashboardFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
     </fragment>
     <fragment
         android:id="@+id/dashboardFragment"
@@ -22,10 +25,23 @@
         <action
             android:id="@+id/action_dashboardFragment_to_cadastrarAvaliacaoFragment"
             app:destination="@id/cadastrarAvaliacaoFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_listaAvaliacoesFragment"
+            app:destination="@id/listaAvaliacoesFragment" />
     </fragment>
     <fragment
         android:id="@+id/cadastrarAvaliacaoFragment"
         android:name="br.edu.infnet.dr4_tp3.ui.cadastro.CadastrarAvaliacaoFragment"
         android:label="cadastrar_avaliacao_fragment"
         tools:layout="@layout/fragment_cadastrar_avaliacao" />
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="br.edu.infnet.dr4_tp3.ui.signup.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" />
+    <fragment
+        android:id="@+id/listaAvaliacoesFragment"
+        android:name="br.edu.infnet.dr4_tp3.ui.lista.ListaAvaliacoesFragment"
+        android:label="fragment_lista_avaliacoes"
+        tools:layout="@layout/fragment_lista_avaliacoes" />
 </navigation>

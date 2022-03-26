@@ -2,13 +2,13 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout"
+    android:id="@+id/frameLayout4"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.signin.SignInFragment" >
+    tools:context=".ui.signup.SignUpFragment" >
 
     <EditText
-        android:id="@+id/sign_in_fragment_txt_email"
+        android:id="@+id/fragment_sign_up_txt_email"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -18,56 +18,64 @@
         android:hint="E-mail"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/fragment_sign_up_lbl_title" />
 
     <EditText
-        android:id="@+id/sign_in_fragment_txt_senha"
+        android:id="@+id/fragment_sign_up_txt_repetir_senha"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
         android:ems="10"
-        android:hint="Senha"
+        android:hint="Repetir Senha"
         android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sign_in_fragment_txt_email" />
-
-    <Button
-        android:id="@+id/sign_in_fragment_btn_acessar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="48dp"
-        android:text="Acessar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_sign_in_cb_lembrar_email" />
+        app:layout_constraintTop_toBottomOf="@+id/fragment_sign_up_txt_senha" />
 
-    <CheckBox
-        android:id="@+id/fragment_sign_in_cb_lembrar_email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        android:text="Lembrar do e-mail?"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sign_in_fragment_txt_senha" />
-
-    <TextView
-        android:id="@+id/fragment_sign_in_lbl_cadastrarse"
+    <Button
+        android:id="@+id/fragment_sign_up_btn_cadastrar"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
-        android:text="Usuário novo? Clique aqui para se cadastrar."
-        android:textAlignment="center"
+        android:text="Cadastrar"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sign_in_fragment_btn_acessar" />
+        app:layout_constraintTop_toBottomOf="@+id/fragment_sign_up_txt_repetir_senha" />
+
+    <EditText
+        android:id="@+id/fragment_sign_up_txt_senha"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:hint="Senha"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_sign_up_txt_email" />
+
+    <TextView
+        android:id="@+id/fragment_sign_up_lbl_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#81C784"
+        android:paddingVertical="10dp"
+        android:text="Cadastrar Novo Usuário"
+        android:textAlignment="center"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.558"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,13 +10,16 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import br.edu.infnet.dr4_tp3.R
 import br.edu.infnet.dr4_tp3.database.AppDatabase
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class CadastrarAvaliacaoFragment : Fragment() {
 
     private lateinit var viewModel: CadastrarAvaliacaoViewModel
     private lateinit var nomeEmpresa: EditText
     private lateinit var bairro: EditText
-    private lateinit var usuario: String
     private lateinit var btnCadastrar: Button
     private lateinit var rdgrp1: RadioGroup
     private lateinit var rdgrp2: RadioGroup
@@ -36,17 +39,22 @@ class CadastrarAvaliacaoFragment : Fragment() {
     private lateinit var rdBtnP5O2: RadioButton
     private lateinit var rdBtnP6O1: RadioButton
     private lateinit var rdBtnP6O2: RadioButton
+    private lateinit var userId: String
+    private var user: FirebaseUser? = null
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_cadastrar_avaliacao, container, false)
+        setupUser()
         setupViewModel()
         setupWidgets(view)
 
         return view
     }
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -70,22 +78,21 @@ class CadastrarAvaliacaoFragment : Fragment() {
             if (rdgrp5.checkedRadioButtonId == rdBtnP5O1.id) r5 = true
             if (rdgrp6.checkedRadioButtonId == rdBtnP6O1.id) r6 = true
 
-            //Log.d("Teste de avaliacao", "${nomeEmpresa.text}, ${bairro.text}, $r1, $r2, $r3, $r4, $r5, $r6")
-            viewModel.cadastrarAvaliacao(usuario,
+            //Log.d("Teste de avaliacao",userId)
+            viewModel.cadastrarAvaliacao(userId,
                 nomeEmpresa.text.toString(),
                 bairro.text.toString(), r1, r2, r3, r4, r5, r6)
+                makeToast(getString(R.string.avaliacao_cadastrada))
+
         } else {
-            Toast.makeText(requireContext(),
-                getString(R.string.ha_campos_vazios),
-                Toast.LENGTH_LONG)
-                .show()
+            makeToast(getString(R.string.ha_campos_vazios))
         }
     }
 
     private fun haCampoVazio(): Boolean {
         if (nomeEmpresa.text.isNullOrBlank()) return true
         if (bairro.text.isNullOrBlank()) return true
-        //if (usuario.isNullOrBlank()) return true
+        if (userId.isNullOrBlank()) return true
         if (rdgrp1.checkedRadioButtonId == -1) return true
         if (rdgrp2.checkedRadioButtonId == -1) return true
         if (rdgrp3.checkedRadioButtonId == -1) return true
@@ -124,5 +131,14 @@ class CadastrarAvaliacaoFragment : Fragment() {
         rdBtnP5O2 = view.findViewById(R.id.fragment_cadastrar_avaliacao_rdbtn_pergunta5_opcao2)
         rdBtnP6O1 = view.findViewById(R.id.fragment_cadastrar_avaliacao_rdbtn_pergunta6_opcao1)
         rdBtnP6O2 = view.findViewById(R.id.fragment_cadastrar_avaliacao_rdbtn_pergunta6_opcao2)
+    }
+
+    private fun setupUser() {
+        user = Firebase.auth.currentUser
+        userId = user?.uid.toString()
+    }
+
+    private fun makeToast(msg: String) {
+        Toast.makeText(requireContext(), msg, Toast.LENGTH_SHORT).show()
     }
 }
